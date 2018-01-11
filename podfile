@@ -12,6 +12,7 @@ target 'RK Social' do
   pod 'Firebase/Storage'
   pod 'FacebookCore'
   pod 'FacebookLogin'
+  pod 'SwiftKeychainWrapper', '~> 3.0'
 
   
 
