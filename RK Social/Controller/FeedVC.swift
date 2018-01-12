@@ -10,15 +10,17 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
-    
     @IBAction func signOutTapped(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         let firebaseAuth = Auth.auth()
@@ -31,6 +33,20 @@ class FeedVC: UIViewController {
         
     }
     
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //add number of rows
+        
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        
+    }
 
 }

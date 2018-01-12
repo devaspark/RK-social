@@ -15,6 +15,7 @@
 		B35017882000A279007DADEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35017872000A279007DADEA /* GoogleService-Info.plist */; };
 		B388C3F820073C4700B4B825 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C3F720073C4700B4B825 /* FeedVC.swift */; };
 		B390473F20087C170026316F /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390473E20087C170026316F /* CircleView.swift */; };
+		B3904741200888700026316F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3904740200888700026316F /* PostCell.swift */; };
 		B3DD14FD2002BF4E00989E16 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DD14FC2002BF4E00989E16 /* CustomView.swift */; };
 		B3DD15002002BFF400989E16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DD14FF2002BFF400989E16 /* Constants.swift */; };
 		B3DD15022002C28D00989E16 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DD15012002C28D00989E16 /* RoundBtn.swift */; };
@@ -36,6 +37,7 @@
 		B35017872000A279007DADEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B388C3F720073C4700B4B825 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		B390473E20087C170026316F /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		B3904740200888700026316F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B3DD14FC2002BF4E00989E16 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		B3DD14FF2002BFF400989E16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3DD15012002C28D00989E16 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B3DD15032002C44000989E16 /* CustomText.swift */,
 				B3DD15052002C54700989E16 /* CustomBtn.swift */,
 				B390473E20087C170026316F /* CircleView.swift */,
+				B3904740200888700026316F /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				B35017732000A1E1007DADEA /* AppDelegate.swift in Sources */,
 				B3DD15002002BFF400989E16 /* Constants.swift in Sources */,
 				B3DD15042002C44000989E16 /* CustomText.swift in Sources */,
+				B3904741200888700026316F /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
