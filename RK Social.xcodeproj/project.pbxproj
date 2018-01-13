@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B346ECC8200979D7007636AA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346ECC7200979D7007636AA /* DataService.swift */; };
+		B346ECCA200995CA007636AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346ECC9200995CA007636AA /* Post.swift */; };
 		B35017732000A1E1007DADEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35017722000A1E1007DADEA /* AppDelegate.swift */; };
 		B35017752000A1E1007DADEA /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35017742000A1E1007DADEA /* SignInVC.swift */; };
 		B35017782000A1E1007DADEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35017762000A1E1007DADEA /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		0D8F9AF994C0ADB09B8DE617 /* Pods-RK Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RK Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-RK Social/Pods-RK Social.release.xcconfig"; sourceTree = "<group>"; };
 		976273098852E8D6760D73E9 /* Pods-RK Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RK Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RK Social/Pods-RK Social.debug.xcconfig"; sourceTree = "<group>"; };
 		B346ECC7200979D7007636AA /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B346ECC9200995CA007636AA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B350176F2000A1E1007DADEA /* RK Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RK Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35017722000A1E1007DADEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35017742000A1E1007DADEA /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		B35017842000A222007DADEA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B346ECC9200995CA007636AA /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				B390473F20087C170026316F /* CircleView.swift in Sources */,
 				B3DD14FD2002BF4E00989E16 /* CustomView.swift in Sources */,
 				B3DD15022002C28D00989E16 /* RoundBtn.swift in Sources */,
+				B346ECCA200995CA007636AA /* Post.swift in Sources */,
 				B35017752000A1E1007DADEA /* SignInVC.swift in Sources */,
 				B3DD15062002C54700989E16 /* CustomBtn.swift in Sources */,
 				B346ECC8200979D7007636AA /* DataService.swift in Sources */,
