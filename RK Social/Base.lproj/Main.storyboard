@@ -73,9 +73,6 @@
                                     <constraint firstAttribute="height" constant="150" id="eQ1-vz-pmv"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="f"/>
-                                <connections>
-                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LqU-U1-2WZ"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ffq-Op-ehK">
                                 <rect key="frame" x="30" y="440" width="315" height="117"/>
@@ -99,9 +96,6 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Esr-Md-g9I"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -127,9 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="ap7-qF-Cal" id="au4-RE-17H"/>
-                        <outlet property="pwdField" destination="16d-zl-vID" id="gB5-rN-cxB"/>
-                        <segue destination="auk-uL-77h" kind="show" identifier="goToFeed" id="pXe-pB-jCt"/>
+                        <segue destination="auk-uL-77h" kind="show" identifier="goToFeed" id="2A2-6m-eps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -321,6 +313,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="k9G-SP-9vo" id="4yB-NM-WPV"/>
+                                            <outlet property="likeImg" destination="ztL-ui-V3W" id="P0i-P7-vQa"/>
                                             <outlet property="likesLbl" destination="ZM9-09-ti0" id="pkT-ud-IPX"/>
                                             <outlet property="postImg" destination="MnX-O6-Kjw" id="f0f-GU-JEp"/>
                                             <outlet property="profileImg" destination="AvU-Wb-Vng" id="MsV-nd-AYh"/>
@@ -349,7 +342,7 @@
                         <outlet property="captionField" destination="nmD-lF-yov" id="tug-MN-fHI"/>
                         <outlet property="imageAdd" destination="Ekh-Ag-XTm" id="LJt-aW-GHy"/>
                         <outlet property="tableView" destination="p4Q-yg-ZUI" id="ApJ-FM-aTY"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="xi9-3Y-nOH"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="DFx-vv-4Jd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1P-cp-Kw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
