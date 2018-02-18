@@ -38,6 +38,11 @@ class Post {
         self._likes = likes
     }
     
+    init(postKey: String, caption: String) {
+        self._postKey = postKey
+        self._caption = caption
+    }
+    
     init(postKey: String, postData: Dictionary<String, Any>) {
         self._postKey = postKey
         

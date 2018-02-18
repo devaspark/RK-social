@@ -10,18 +10,24 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+protocol PostDelegate {
+    func SendingPostData(tempPost: Post)
+}
+
+
+
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CommentDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
-    
     @IBOutlet weak var captionField: CustomText!
-    
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
+    var postDelegate: PostDelegate?
+    weak var tempPost: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +84,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            
+            cell.delegate = self
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
             } else {
@@ -151,11 +157,41 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
         
+        //let threadPost = DataService.ds.REF_THREADS.child(firebasePost.key)
+        //threadPost.setValue(firebasePost.key)
+        
         captionField.text = ""
         imageSelected = false
         imageAdd.image = UIImage(named: "add-image")
         
         self.posts = []
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailPost" {
+            print("did it get here?")
+            let vc = segue.destination as! DetailPost
+            self.postDelegate = vc
+            print("This is postcell \(String(describing: self.tempPost?.caption))")
+            postDelegate?.SendingPostData(tempPost: self.tempPost!)
+            
+        }
+    }
+
+    
+    
+    
+    
+    func CommentData(cell: PostCell) {
+        let indexPath = self.tableView.indexPath(for: cell)
+        let postCell = self.tableView.cellForRow(at: indexPath!) as! PostCell
+        tempPost = postCell.post
+        performSegue(withIdentifier: "toDetailPost", sender: nil)
+        
+        
+
+        print(indexPath!.row)
+        
     }
 
 }

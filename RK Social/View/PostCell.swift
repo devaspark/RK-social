@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol CommentDelegate {
+    func CommentData (cell: PostCell)
+}
+
 class PostCell: UITableViewCell {
 
     @IBOutlet weak var profileImg: UIImageView!
@@ -19,6 +23,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likeImg: UIImageView!
     var post: Post!
     var likesRef: DatabaseReference!
+    var threadRef: DatabaseReference!
+    var delegate: CommentDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -82,4 +88,14 @@ class PostCell: UITableViewCell {
             
         })
     }
+    
+    @IBAction func commBtnPressed(_ sender: UIButton) {
+        if delegate != nil {
+            delegate?.CommentData(cell: self)
+        }
+
+    }
+    
+    
+    
 }

@@ -21,6 +21,8 @@ class DataService {
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts")
     private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_THREADS = DB_BASE.child("threads")
+    private var _REF_COMMENTS = DB_BASE.child("comments")
 
     
     // Storage references
@@ -37,6 +39,14 @@ class DataService {
     
     var REF_USERS: DatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_THREADS: DatabaseReference {
+        return _REF_THREADS
+    }
+    
+    var REF_COMMENTS: DatabaseReference {
+        return _REF_COMMENTS
     }
     
     var REF_USER_CURRENT: DatabaseReference {
